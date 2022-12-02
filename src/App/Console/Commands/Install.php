@@ -1,6 +1,6 @@
 <?php
 
-namespace Gaspertrix\LaravelBackpackDropzoneField\App\Console\Commands;
+namespace Msaid\LaravelBackpackDropzoneField\App\Console\Commands;
 
 use Backpack\CRUD\app\Console\Commands\Traits\PrettyCommandOutput;
 use Illuminate\Console\Command;
@@ -16,7 +16,7 @@ class Install extends Command
      *
      * @var string
      */
-    protected $signature = 'gaspertrix:backpack:dropzone:install
+    protected $signature = 'msaid:backpack:dropzone:install
                                 {--timeout=300} : How many seconds to allow each process to run.
                                 {--debug} : Show process output or not. Useful for debugging.';
 
@@ -41,16 +41,16 @@ class Install extends Command
 
         $this->progressBar->start();
 
-        $this->info(' Gaspertrix\LaravelBackpackDropzoneField installation started. Please wait...');
+        $this->info(' Msaid\LaravelBackpackDropzoneField installation started. Please wait...');
         $this->progressBar->advance();
 
         $this->line(' Publishing public assets');
         $this->executeArtisanProcess('vendor:publish', [
-            '--provider' => 'Gaspertrix\LaravelBackpackDropzoneField\DropzoneFieldServiceProvider',
+            '--provider' => 'Msaid\LaravelBackpackDropzoneField\DropzoneFieldServiceProvider',
             '--tag'      => 'public',
         ]);
 
         $this->progressBar->finish();
-        $this->info(' Gaspertrix\LaravelBackpackDropzoneField successfully installed');
+        $this->info(' Msaid\LaravelBackpackDropzoneField successfully installed');
     }
 }

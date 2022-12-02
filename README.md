@@ -30,7 +30,7 @@ php artisan gaspertrix:backpack:dropzone:install
 
 You may publish views with:
 ``` bash
-php artisan vendor:publish --provider="Gaspertrix\LaravelBackpackDropzoneField\DropzoneFieldServiceProvider" --tag="views"
+php artisan vendor:publish --provider="Msaid\LaravelBackpackDropzoneField\DropzoneFieldServiceProvider" --tag="views"
 ```
 
 ## Usage
@@ -48,7 +48,7 @@ For simplicity add the `MediaOperation` operation to EntityCrudController.
 class EntityCrudController extends CrudController
 {
 	...
-    use \Gaspertrix\LaravelBackpackDropzoneField\App\Http\Controllers\Operations\MediaOperation;
+    use \Msaid\LaravelBackpackDropzoneField\App\Http\Controllers\Operations\MediaOperation;
 
 	...
 }
