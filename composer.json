@@ -1,5 +1,5 @@
 {
-    "name": "gaspertrix/laravel-backpack-dropzone-field",
+    "name": "msaid/backpack-dropzone",
     "type": "library",
     "description": "Add Dropzone support for Laravel Backpack",
     "keywords": [
